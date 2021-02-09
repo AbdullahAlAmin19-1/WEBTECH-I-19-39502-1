@@ -141,14 +141,14 @@ function test_input($data)
   Blood Group:
   <select name="blood_group">
   <option></option>
-  <option name="blood_group" <?php if (isset($dblood_group) && $blood_group=="a+") echo "checked";?> value="a+">A+</option>
-  <option name="blood_group" <?php if (isset($dblood_group) && $blood_group=="a-") echo "checked";?> value="a-">A-</option>
-  <option name="blood_group" <?php if (isset($dblood_group) && $blood_group=="b+") echo "checked";?> value="b+">B+</option>
-  <option name="blood_group" <?php if (isset($dblood_group) && $blood_group=="b-") echo "checked";?> value="b-">B-</option>
-  <option name="blood_group" <?php if (isset($dblood_group) && $blood_group=="o+") echo "checked";?> value="o+">O+</option>
-  <option name="blood_group" <?php if (isset($dblood_group) && $blood_group=="o-") echo "checked";?> value="o-">O-</option>
-   <option name="blood_group" <?php if (isset($dblood_group) && $blood_group=="ab+") echo "checked";?> value="ab+">AB+</option>
-  <option name="blood_group" <?php if (isset($dblood_group) && $blood_group=="ab-") echo "checked";?> value="ab-">AB-</option>
+  <option name="blood_group" <?php if (isset($blood_group) && $blood_group=="a+") echo "checked";?> value="a+">A+</option>
+  <option name="blood_group" <?php if (isset($blood_group) && $blood_group=="a-") echo "checked";?> value="a-">A-</option>
+  <option name="blood_group" <?php if (isset($blood_group) && $blood_group=="b+") echo "checked";?> value="b+">B+</option>
+  <option name="blood_group" <?php if (isset($blood_group) && $blood_group=="b-") echo "checked";?> value="b-">B-</option>
+  <option name="blood_group" <?php if (isset($blood_group) && $blood_group=="o+") echo "checked";?> value="o+">O+</option>
+  <option name="blood_group" <?php if (isset($blood_group) && $blood_group=="o-") echo "checked";?> value="o-">O-</option>
+  <option name="blood_group" <?php if (isset($blood_group) && $blood_group=="ab+") echo "checked";?> value="ab+">AB+</option>
+  <option name="blood_group" <?php if (isset($blood_group) && $blood_group=="ab-") echo "checked";?> value="ab-">AB-</option>
   </select>
   <span class="error">* <?php echo $blood_groupErr;?></span>
   <br><br>
