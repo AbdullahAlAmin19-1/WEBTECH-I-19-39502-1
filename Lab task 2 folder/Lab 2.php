@@ -1,17 +1,16 @@
 <!DOCTYPE HTML>  
 <html>
-<head>
 
+<head>
 </head>
+
 <body>  
 
 <style>
 .error {color: #FF0000;}
 </style>
-<!-- startsWith("abcde","c")
-$word=explor(" ", $name) -->
+
 <?php
-// define variables and set to empty values
 $nameErr = $emailErr = $genderErr = $dobErr = $degreeErr = $blood_groupErr = "";
 $name = $email = $gender = $birthday = $blood_group = $count = "";
 $degree = array();
@@ -25,7 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   else 
   {
     $name = test_input($_POST["name"]);
-    // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z-' .]*$/",$name) || str_word_count($name)<2 )
     {
       $nameErr = "Only letters, white space, period, dash allowed and minimum two words";
@@ -41,7 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   else 
   {
     $email = test_input($_POST["email"]);
-    // check if e-mail address is well-formed
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
     {
       $emailErr = "Invalid email format";
