@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Donation Form</title>
+</head>
+<body style="background-color:lightgray; ">
+
+<p><SPAN style="color:red">*</SPAN> - Denotes Required Information</p>
+
+<p><b>> 1 Donation</b>	> 2 Confirmatioin	> Thank You!</p>
+
+<h3 style="color:red">Donor Information</h3>
+
+
+<form action="/action_page.php" style="margin: 0 auto;">
+
+  <label for="fname"><b>First Name</b><SPAN style="color:red">*</SPAN></label>
+  <input type="text" id="fname" name="fname" value="" required style="width: 400px"><br>
+
+  <label for="lname"><b>Last Name</b><SPAN style="color:red">*</SPAN></label>
+  <input type="text" id="lname" name="lname" value="" required style="width: 400px"><br>
+
+  <label for="company"><b>Company</b></label>
+  <input type="text" id="company" name="company" value="" style="width: 400px"><br>
+
+  <label for="address 1"><b>Address 1</b><SPAN style="color:red">*</SPAN></label>
+  <input type="text" id="address 1" name="address 1" value="" required style="width: 400px"><br>
+
+  <label for="address 2"><b>Address 2</b><SPAN style="color:red">*</SPAN></label>
+  <input type="text" id="address 2" name="address 2" value="" required style="width: 400px"><br>
+
+  <label for="city"><b>City</b><SPAN style="color:red">*</SPAN></label>
+  <input type="text" id="city" name="city" value="" required style="width: 400px"><br>
+
+  <label for="state"><b>State</b><SPAN style="color:red">*</SPAN></label>
+  <select id="state" name="state" required style="width: 150px">
+  	<option>Select a State</option>
+    <option value="a">A</opiton>
+    <option value="b">B</opiton>
+    <option value="c">C</opiton>
+    <option value="d">D</opiton>
+    <option value="e">E</opiton>
+  </select><br>
+
+  <label for="zip code"><b>Zip Code</b><SPAN style="color:red">*</SPAN></label>
+  <input type="text" id="zip code" name="zip code" value="" required style="width: 400px"><br>
+
+  <label for="contry"><b>Contry</b><SPAN style="color:red">*</SPAN></label>
+  <select id="contry" name="contry" required style="width: 400px">
+  	<option>Select a Contry</option>
+    <option value="a">A</opiton>
+    <option value="b">B</opiton>
+    <option value="c">C</opiton>
+    <option value="d">D</opiton>
+    <option value="e">E</opiton>
+  </select><br>
+
+  <label for="phone"><b>Phone</b></label>
+  <input type="text" id="phone" name="phone" value="" style="width: 400px"><br>
+
+  <label for="fax"><b>Fax</b></label>
+  <input type="text" id="fax" name="fax" value="" style="width: 400px"><br>
+
+  <label for="email"><b>Email</b><SPAN style="color:red">*</SPAN></label>
+  <input type="email" id="email" name="email" value="" required style="width: 400px"><br>
+
+  <label for="donation amount"><b>Donation Amount</b><SPAN style="color:red">*</SPAN><br>(Check a button or type in your ammount)</label>
+  <input type="radio" id="none" name="donation amount" value="0">
+  <label for="none">None</label>
+  <input type="radio" id="50" name="donation amount" value="50">
+  <label for="50">$50</label>
+  <input type="radio" id="75" name="donation amount" value="75">
+  <label for="75">$75</label>
+  <input type="radio" id="100" name="donation amount" value="100">
+  <label for="100">$100</label>
+  <input type="radio" id="250" name="donation amount" value="250">
+  <label for="250">$250</label>
+  <input type="radio" id="other" name="donation amount" value="">
+  <label for="other">other</label><br>
+
+  <label for="other amount"><b>Other Amount $</b></label>
+  <input type="number" id="other amount" name="other amount" value="" min="1" style="width: 400px"><br>
+
+  <label for="recurring donation"><b>Recurring Donation</b><br>(Check if yes)</label>
+  <input type="checkbox" id="recurring donation" name="recurring donation">
+  <label for="recurring donation"> I am interested in giving on a regular basis</label><br>
+  <label for="recurring donation"> Monthly Credit Card $</label>
+  <input type="number" id="recurring donation $" name="recurring donation $" value="" min="1" style="width: 40px"> For
+  <input type="number" id="recurring donation months" name="recurring donation months" value="" min="1" style="width: 40px"> Months <br>
+
+  <h3 style="color:red; margin: 0;">Honorarium and Memorial Donation Information</h3>
+
+  <label for="donation info"><b>I would like to make this donation</b></label>
+  <input type="radio" id="to honor" name="donation info">
+  <label for="to honor">To Honor</label><br>
+  <input type="radio" id="in memory of" name="donation info" value="50">
+  <label for="in memory of">In Memory of</label><br>
+
+  <label for="name"><b>Name</b></label>
+  <input type="text" id="name" name="name" value="" style="width: 400px"><br>
+
+  <label for="donation to"><b>Acknowledge Donation to</b></label>
+  <input type="text" id="donation to" name="donation to" value="" style="width: 400px"><br>
+  <label for="address"><b>Address</b></label>
+  <input type="text" id="address" name="address" value="" style="width: 400px"><br>
+  <label for="di city"><b>City</b></label>
+  <input type="text" id="di city" name="di city" value="" style="width: 400px"><br>
+
+  <label for="di state"><b>State</b></label>
+  <select id="di state" name="di state" style="width: 150px">
+  	<option>Select a State</option>
+    <option value="a">A</opiton>
+    <option value="b">B</opiton>
+    <option value="c">C</opiton>
+    <option value="d">D</opiton>
+    <option value="e">E</opiton>
+  </select><br>
+
+  <label for="zip"><b>Zip</b></label>
+  <input type="text" id="zip" name="zip" value="" style="width: 400px"><br>
+
+  <h3 style="color:red; margin: 0;">Additional Information</h3>
+
+  <label>Please enter your name, company or organization as you would like it to appear in our publications:</label><br>
+
+  <label for="ai name"><b>Name</b></label>
+  <input type="text" id="ai name" name="ai name" value="" style="width: 400px"><br>
+
+  <input type="checkbox" id="anonymous" name="anonymous">
+  <label for="anonymous">I would like my gift to remain anonnymous.</label><br>
+
+  <input type="checkbox" id="gift form" name="gift form">
+  <label for="gift form">My employer offers a matching gift program. I will mail the matching gift form.</label><br>
+
+  <input type="checkbox" id="no mail" name="no mail">
+  <label for="no mail">Please save the cost of acknowledging this gift by not mailing a thank you letter.</label><br>
+
+  <label for="comments"><b>Comments</b><br>(Please typeany questions or feedback here)</label>
+  <input type="text" id="comments" name="comments" value="" style="width: 400px; height: 200px"><br>
+
+  <label for="contact"><b>How may we contact you?</b></label>
+
+  <input type="checkbox" id="cemail" name="cemail">
+  <label for="cemail">E-mail</label><br>
+
+  <input type="checkbox" id="postal email" name="postal email">
+  <label for="postal email">Postal mail</label><br>
+
+  <input type="checkbox" id="telephon" name="telephon">
+  <label for="telephon">Telephon</label><br>
+
+  <input type="checkbox" id="cfax" name="cfax">
+  <label for="cfax">Fax</label><br>
+
+  <label for="contact" style="color: gray">I would like to receive newsletters and information about special events by:</label><br>
+
+  <input type="checkbox" id="cremail" name="cremail">
+  <label for="cremail">E-mail</label><br>
+
+  <input type="checkbox" id="crpostal email" name="crpostal email">
+  <label for="crpostal email">Postal mail</label><br>
+
+  <input type="checkbox" id="volunteering" name="volunteering">
+  <label for="volunteering">I would like information about volunteering with the organization</label><br>
+
+  <input type="reset">
+
+  <input type="submit" value="Continue">
+
+  <p>Donate online with confidence. you are on a secure server.</p>
+  <p>If you have any problems or quesdtions, please contact <span style="color: gray">support.</span></p>
+
+
+</form>
+
+
+</body>
+</html>
