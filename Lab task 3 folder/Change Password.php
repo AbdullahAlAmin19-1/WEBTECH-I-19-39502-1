@@ -28,7 +28,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
       $current_passwordErr = "Must be atlest 8 characters";
       $current_password="";
     }
-    if($current_password!=$pasword)
+    else if (!preg_match("/[@,#,$,%]/",$current_password)) 
+    {
+      $current_passwordErr = "Password must contain at least one of the special character (@, #, $,%)";
+      $current_password="";
+    }
+    else if($current_password!=$pasword)
     {
       $current_passwordErr = "Password dosen't match";
       $current_password="";
@@ -47,7 +52,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
       $new_passwordErr = "Must be atlest 8 characters";
       $new_password="";
     }
-    if($new_password==$current_password)
+    else if (!preg_match("/[@,#,$,%]/",$new_password)) 
+    {
+      $new_passwordErr = "Password must contain at least one of the special character (@, #, $,%)";
+      $new_password ="";
+    }
+    else if($new_password==$current_password)
     {
       $new_passwordErr = "Can't set the same Password";
       $new_password="";
@@ -56,16 +66,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
   if (empty($_POST["retype_new_password"])) 
   {
-    $retype_new_passwordErr = "Enter New Password";
+    $retype_new_passwordErr = "Retype New Password";
   } 
   else 
   {
     $retype_new_password = test_input($_POST["retype_new_password"]);
-    if (strlen($retype_new_password) <= 8 )
-    {
-      $retype_new_passwordErr = "Must be atlest 8 characters";
-      $retype_new_password="";
-    }
     if($retype_new_password!=$new_password)
     {
       $retype_new_passwordErr = "Password dosen't match";
@@ -88,17 +93,17 @@ function test_input($data)
   <legend>CHANGE PASSWORD</legend>
 
   <label for="current_password">Current Password :</label>
-  <input type="text" id="current_password" name="current_password"value="<?php echo $current_password;?>">
+  <input type="password" id="current_password" name="current_password">
   <span class="error"> <?php echo $current_passwordErr;?></span>
   <br><br>
 
   <label for="new_password">New Password :</label>
-  <input type="text" id="new_password" name="new_password"value="<?php echo $new_password;?>">
+  <input type="password" id="new_password" name="new_password">
   <span class="error"> <?php echo $new_passwordErr;?></span>
   <br><br>
 
   <label for="retype_new_password">Retype New Password :</label>
-  <input type="text" id="retype_new_password" name="retype_new_password"value="<?php echo $retype_new_password;?>">
+  <input type="password" id="retype_new_password" name="retype_new_password">
   <span class="error"> <?php echo $retype_new_passwordErr;?></span>
   <br><br>
 
