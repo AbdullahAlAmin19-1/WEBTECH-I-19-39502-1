@@ -4,7 +4,14 @@
 <title>Change Password</title>
 </head>
 <body>
-  
+ <?php 
+
+session_start();
+
+if (isset($_SESSION['user_name'])){ require 'top1.php';}
+else
+  header("location:Login.php");
+ ?>
 <style>
 .error {color: #FF0000;}
 </style>
@@ -12,7 +19,7 @@
 <?php
 $current_password = $new_password = $retype_new_password = "";
 $current_passwordErr = $new_passwordErr = $retype_new_passwordErr = "";
-$pasword="@0123456789";
+$pasword="@1234567890";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
@@ -87,7 +94,7 @@ function test_input($data)
   return $data;
 }
 ?>
-
+<div style="margin-left: 35%; margin-top: 10%;">
 <form method="post">
  <fieldset style="width: 500px">
   <legend>CHANGE PASSWORD</legend>
@@ -113,5 +120,7 @@ function test_input($data)
 
  </fieldset>
 </form>
+</div> 
+<?php require 'footer.php';?>
 </body>
 </html>
