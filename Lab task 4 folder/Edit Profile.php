@@ -137,11 +137,11 @@ foreach($data as $row)
 
 
 <label for="gender">Gender :</label>
-  <input type="radio" id="male" name="gender" value="<?php echo $gender ?>">
+  <input type="radio" id="male" name="gender" value="male"<?php if("male" == $gender){echo "checked";}?>>
   <label for="male">Male</label>
-  <input type="radio" id="female" name="gender" value="<?php echo $gender ?>">
+  <input type="radio" id="female" name="gender" value="female"<?php if("female" == $gender){echo "checked";} ?>>
   <label for="female">Female</label> 
-  <input type="radio" id="other" name="gender" value="<?php echo $gender ?>">
+  <input type="radio" id="other" name="gender" value="other"<?php if("other" == $gender){echo "checked";} ?>>
   <label for="other">Other </label>  
   <span class="error"> <?php echo $genderErr;?></span>
   <hr>
