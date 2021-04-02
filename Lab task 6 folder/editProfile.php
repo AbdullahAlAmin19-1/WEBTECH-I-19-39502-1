@@ -24,6 +24,8 @@ require 'Controller/storeData.php';
   <input type="text" id="name" name="name" value="<?php echo $name ?>">
   <span class="error"> <?php echo $nameErr;?></span><hr>
 
+  <p>ID             :   <?php echo $id ?></p><hr>
+
   <label for="email">Email :</label>
   <input type="text" id="email" name="email" value="<?php echo $email ?>">
   <span class="error"> <?php echo $emailErr;?></span><hr>
@@ -35,6 +37,8 @@ require 'Controller/storeData.php';
   <label for="address">Address :</label>
   <input type="text" id="address" name="address" value="<?php echo $address ?>">
   <span class="error"> <?php echo $addressErr;?></span><hr>
+  
+  <p>Category       :   <?php echo $category ?></p><hr>
 
   <label for="gender">Shift :</label>
   <input type="radio" id="day" name="shift" value="Day (8AM - 4PM)"<?php if("Day (8AM - 4PM)" == $shift){echo "checked";}?>>
@@ -43,19 +47,8 @@ require 'Controller/storeData.php';
     <label for="night">Night</label>
   <span class="error"> <?php echo $shiftErr;?></span><hr>
 
-  <label for="gender">Gender :</label>
-  <input type="radio" id="male" name="gender" value="male"<?php if("male" == $gender){echo "checked";}?>>
-  <label for="male">Male</label>
-  <input type="radio" id="female" name="gender" value="female"<?php if("female" == $gender){echo "checked";} ?>>
-  <label for="female">Female</label> 
-  <input type="radio" id="other" name="gender" value="other"<?php if("other" == $gender){echo "checked";} ?>>
-  <label for="other">Other </label>  
-  <span class="error"> <?php echo $genderErr;?></span>
-  <hr>
-
-  <label for="dob">Date of Birthday :</label>
-  <input type="date" id="dob" name="dob" value="<?php echo $dob ?>">
-  <span class="error"> <?php echo $dobErr;?></span>
+  <p>Gender         :   <?php echo $gender ?></p><hr>
+  <p>Date of Birthday:  <?php echo $dob ?></p>
   <hr>
 
 <input type="submit" name="submit" value="Submit">

@@ -35,7 +35,7 @@ require 'Controller/showData.php';
 <div class="justRight">
   <img class="proPic" 
   src="Uploads/<?php 
-  if (isset($_SESSION['pic'])){echo $_SESSION['pic'];} 
+  if ($image!=null){echo $image; $_SESSION['pic']=$image;} 
   else{echo "pic.png";}
   ?>" alt="Profile Picture"> 
   <div class="textCenter"> <a href="changeProfilePicture.php" >Change Profile Picture</a>

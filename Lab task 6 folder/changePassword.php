@@ -42,10 +42,10 @@ require 'Controller/confirmPaswordChange.php';
 
  </fieldset>
 </form>
+</div> 
 <?php
 echo $message;
 ?>
-</div> 
 <?php require 'Bar/footer.php';?>
 </body>
 </html>

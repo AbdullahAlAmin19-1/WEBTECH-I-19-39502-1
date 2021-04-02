@@ -1,0 +1,73 @@
+/*for border and padding in fieldset*/
+.b
+{
+	padding: 5px 5px;
+	border: 2px solid black;
+}
+/*for padding 15px top-bottom-left-right*/
+.padding
+{
+	padding: 15px 15px !important;
+}
+/*for logo at right top*/
+.logo
+{
+	width: 120px;
+}
+/*welcome page picture*/
+.p
+{
+	width: 35%;
+}
+/*move right 50px margin*/
+.right
+{
+	float: right;
+	margin-right: 50px;
+}
+/*move left 50px margin*/
+.left
+{
+	float: left;
+	margin-left: 50px;
+}
+/*for footer*/
+.foot 
+{
+	position: fixed;
+	left: 0%;
+   	bottom: 0%;
+   	width: 100%;
+   	text-align: center;
+}
+/*text center*/
+.textCenter
+{
+	text-align: center;
+}
+/*error message colour*/
+.error 
+{
+	color: #FF0000;
+}
+/*div element center*/
+.div
+{
+  display: flex;
+  justify-content: center;
+}
+/*move right*/
+.justRight
+{
+	float: right;
+}
+/*mov left*/
+.justLeft
+{
+	float: left;
+}
+/*profile picture width*/
+.proPic
+{
+	width:85%;
+}
