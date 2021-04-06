@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
       $current_passwordErr = "Password must contain at least one of the special character (!,@,#,$,%,^,&)";
       $current_password="";
     }
-    if(!password_verify($current_password, $password))
+    else if(!password_verify($current_password, $password))
     {
       $current_passwordErr = "Password dosen't match";
       $current_password="";

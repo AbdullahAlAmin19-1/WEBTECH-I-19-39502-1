@@ -1,13 +1,18 @@
-/*for border and padding in fieldset*/
+/*Decrease table font*/
+.sFont
+{
+	font-size: .5rem;
+}
+/*for border and padding in div*/
 .b
 {
-	padding: 5px 5px;
+	padding: 10px 10px;
 	border: 2px solid black;
 }
-/*for padding 15px top-bottom-left-right*/
+/*for padding 10px top-bottom-left-right*/
 .padding
 {
-	padding: 15px 15px !important;
+	padding: 10px 10px;
 }
 /*for logo at right top*/
 .logo
@@ -34,7 +39,7 @@
 /*for footer*/
 .foot 
 {
-	position: fixed;
+	/*position: absolute;*/
 	left: 0%;
    	bottom: 0%;
    	width: 100%;

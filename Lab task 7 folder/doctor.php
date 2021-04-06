@@ -4,15 +4,16 @@
 <title>Doctors</title>
 <link rel="stylesheet" href="CSS/style.css">
 <link rel="stylesheet" href="CSS/bootstrap.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
+<div class="container-fluid">
 <?php 
 session_start();
 if (isset($_SESSION['name'])){require 'Bar/top1.php';}
 else{header("location:login.php");} 
 ?>
-<div class="container-fluid">
-  <div class="container">
+<div class="container">
 <h1 class="textCenter">Doctors Info</h1><br><br>
 <div class="div">
 <table class="table">
@@ -217,7 +218,7 @@ else{header("location:login.php");}
 </table>
 </div>
 </div>
-</div>
 <?php require 'Bar/footer.php';?>
+</div>
 </body>
 </html>

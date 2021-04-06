@@ -4,22 +4,23 @@
 <title>LogIn</title>
 <link rel="stylesheet" href="CSS/style.css">
 <link rel="stylesheet" href="CSS/bootstrap.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
+<div class="container-fluid">
 <?php 
 session_start();
 if (isset($_SESSION['name'])){header("location:welcome.php");}
 else{require 'Bar/top.php';}
 require 'controller/loginCheck.php';
 ?>
-<div class="container-fluid">
   <div class="container">
 <div class="div">
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" >
- <fieldset class="b" style="border: 2px solid black; padding: 10px 10px;">
+ <div class="b" style="border: 2px solid black; padding: 10px 10px;">
   <legend>LOGIN</legend>
 
-  <fieldset class="b" style="border: 2px solid black; padding: 10px 10px;">
+  <div class="b" style="border: 2px solid black; padding: 10px 10px;">
   <legend> Category</legend> 
   <input type="radio" id="doctor" name="category" value="Doctor"<?php if(isset($_COOKIE['category']) && $_COOKIE['category']=="Doctor"){echo "checked";} ?>>
   <label for="doctor">Doctor</label>
@@ -28,7 +29,7 @@ require 'controller/loginCheck.php';
   <input type="radio" id="receptionist" name="category" value="Receptionist"<?php if(isset($_COOKIE['category']) && $_COOKIE['category']=="Receptionist"){echo "checked";} ?>>
   <label for="receptionist">Receptionist </label>  
   <span class="error"> <?php echo $categoryErr;?></span>
- </fieldset><br>
+ </div><br>
 
   <label for="name">User name :</label>
   <input type="text" id="name" name="name" value="<?php if(isset($_COOKIE['name'])){echo $_COOKIE['name'];} ?>">
@@ -46,12 +47,12 @@ require 'controller/loginCheck.php';
 
   <input type="submit" value="Submit"><a href="forgotPassword.php">Forgot Password?</a>
 
- </fieldset>
+ </div>
 </form> 
 </div>
 </div>
-</div>
 <?php require 'Bar/footer.php';?>
+</div>
 
 </body>
 </html>

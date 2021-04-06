@@ -4,13 +4,11 @@
 <head>
 </head>
 <body>
-<div class="container-fluid">
-  <div class="container">
+<footer>
   	<br>
-<footer class="foot navbar-dark bg-primary padding" style="padding: 15px 15px">
-  	<h6 class="textCenter">Copyright &#169 2021</h6>
+	<div class="foot navbar-dark bg-primary padding">
+  		<h6 class="textCenter">Copyright &#169 2021</h6>
+	</div>
 </footer>
-</div>
-</div>
 </body>
 </html>

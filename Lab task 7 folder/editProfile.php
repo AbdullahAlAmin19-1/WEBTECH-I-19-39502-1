@@ -4,8 +4,11 @@
 <title>Edit profile</title>
 <link rel="stylesheet" href="CSS/style.css">
 <link rel="stylesheet" href="CSS/bootstrap.css"> 
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>  
 <body>
+
+<div class="container-fluid">
 <?php 
 
 session_start();
@@ -16,10 +19,9 @@ else{header("location:Login.php");}
 require 'Controller/showData.php';
 require 'Controller/storeData.php';
 ?> 
-<div class="container-fluid">
-  <div class="container">
+<div class="container">
 <div class="div">
-<fieldset class="b" style="border: 2px solid black; padding: 10px 10px;">
+<div class="b">
 <legend>EDIT PROFILE</legend>                 
   <form method="post"> 
   <label for=name">Name :</label>
@@ -55,10 +57,10 @@ require 'Controller/storeData.php';
 
 <input type="submit" name="submit" value="Submit">
 </form>  
-</fieldset>
 </div>
 </div>
-</div> 
+</div>
 <?php require 'Bar/footer.php';?>
+</div> 
 </body>  
 </html>  

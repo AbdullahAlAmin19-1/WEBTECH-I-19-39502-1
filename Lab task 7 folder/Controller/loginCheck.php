@@ -15,9 +15,9 @@ if (isset($_POST['name']) && isset($_POST['category']))
     if(isset($_POST['remember_me']))
     {
     $time = time();
-    setcookie('name', $name, $time+50);
-    setcookie('password', $_POST['password'], $time+50);
-    setcookie('category', $category, $time+50);
+    setcookie('name', $name, $time+150);
+    setcookie('password', $_POST['password'], $time+150);
+    setcookie('category', $category, $time+150);
     }
     header("location:welcome.php");
 	}

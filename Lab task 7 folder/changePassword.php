@@ -4,24 +4,23 @@
 <title>Change Password</title>
 <link rel="stylesheet" href="CSS/style.css">
 <link rel="stylesheet" href="CSS/bootstrap.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
- <?php 
 
+<div class="container-fluid">
+  <?php 
 session_start();
 
 if (isset($_SESSION['name'])){ require 'Bar/top1.php';}
 else{header("location:Login.php");}
 
 require 'Controller/confirmPaswordChange.php';
- ?>
-
-
-<div class="container-fluid">
-  <div class="container">
+?>
+<div class="container">
 <div class="div">
 <form method="post">
- <fieldset class="b" style="border: 2px solid black; padding: 10px 10px;">
+ <div class="b">
   <legend>CHANGE PASSWORD</legend>
 
   <label for="current_password">Current Password :</label>
@@ -43,14 +42,15 @@ require 'Controller/confirmPaswordChange.php';
 
   <input type="submit" value="Submit">
 
- </fieldset>
+ </div>
 </form>
-</div> 
-</div>
 </div>
 <?php
 echo $message;
-?>
+?> 
+</div>
 <?php require 'Bar/footer.php';?>
+</div>
+
 </body>
 </html>

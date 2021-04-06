@@ -3,9 +3,12 @@
 <head>  
 <title>Registration</title>
 <link rel="stylesheet" href="CSS/style.css">
-<link rel="stylesheet" href="CSS/bootstrap.css"> 
+<link rel="stylesheet" href="CSS/bootstrap.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>  
 <body>
+
+<div class="container-fluid">
 <?php 
 
 session_start();
@@ -14,11 +17,9 @@ if (isset($_SESSION['name'])){header("location:welcome.php");}
 else{  require 'Bar/top.php';}
 require 'Controller/storeData.php';
 ?>
-
-<div class="container-fluid">
   <div class="container">
 <div class="div">
-<fieldset class="b" style="border: 2px solid black; padding: 10px 10px;">
+<div class="b" style="border: 2px solid black; padding: 10px 10px;">
 <legend>REGISTRATION</legend>                 
   <form method="post"> 
   <label for=name">Name :</label>
@@ -45,16 +46,16 @@ require 'Controller/storeData.php';
   <input type="password" id="confirm_password" name="confirm_password">
   <span class="error"> <?php echo $confirm_passwordErr;?></span><hr>
 
-<fieldset class="b" style="border: 2px solid black; padding: 10px 10px;">
+<div class="b" style="border: 2px solid black; padding: 10px 10px;">
   <legend>Shift</legend>
   <input type="radio" id="day" name="shift" value="Day (8AM - 4PM)">
   <label for="day">Day</label>
   <input type="radio" id="night" name="shift" value="Night (4PM -12PM)">
     <label for="night">Night</label>
   <span class="error"> <?php echo $shiftErr;?></span>
-  </fieldset><br>
+  </div><br>
 
-<fieldset class="b" style="border: 2px solid black; padding: 10px 10px;">
+<div class="b" style="border: 2px solid black; padding: 10px 10px;">
 <legend> Category</legend> 
   <input type="radio" id="doctor" name="category" value="Doctor">
   <label for="doctor">Doctor</label>
@@ -63,9 +64,9 @@ require 'Controller/storeData.php';
   <input type="radio" id="receptionist" name="category" value="Receptionist">
   <label for="receptionist">Receptionist </label>  
   <span class="error"> <?php echo $categoryErr;?></span>
- </fieldset><br>
+ </div><br>
 
-<fieldset class="b" style="border: 2px solid black; padding: 10px 10px;">
+<div class="b" style="border: 2px solid black; padding: 10px 10px;">
 <legend> Gender</legend> 
   <input type="radio" id="male" name="gender" value="Male">
   <label for="male">Male</label>
@@ -74,21 +75,21 @@ require 'Controller/storeData.php';
   <input type="radio" id="other" name="gender" value="Other">
   <label for="other">Other </label>  
   <span class="error"> <?php echo $genderErr;?></span>
- </fieldset><br>
+ </div><br>
 
-<fieldset class="b" style="border: 2px solid black; padding: 10px 10px;">
+<div class="b" style="border: 2px solid black; padding: 10px 10px;">
   <legend>Date of Birthday</legend>
   <input type="date" name="dob"> 
   <span class="error"> <?php echo $dobErr;?></span>
-</fieldset><br>
+</div><br>
 
 <input type="submit" name="submit" value="Submit">
 <input type="reset" name="reset" value="Reset">
 </form>  
-</fieldset>
+</div>
 </div> 
 </div>
-</div>
 <?php require 'Bar/footer.php';?>
+</div>
 </body>  
 </html>  

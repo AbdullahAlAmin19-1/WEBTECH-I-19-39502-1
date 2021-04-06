@@ -4,19 +4,21 @@
 <title>Patients</title>
 <link rel="stylesheet" href="CSS/style.css">
 <link rel="stylesheet" href="CSS/bootstrap.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
+
+<div class="container-fluid">
 <?php 
 session_start();
 if (isset($_SESSION['name'])){require 'Bar/top1.php';}
 else{header("location:login.php");} 
 ?>
-<div class="container-fluid">
-  <div class="container">
+<div class="container">
 <h1 class="textCenter">Patients Info</h1><br><br>
 <div class="div">
 <form method="post">
-<table class="table">
+<table class="table sFont">
     <thead class="table-dark">
   <tr>
     <th scope="col">ID</th>
@@ -204,7 +206,7 @@ else{header("location:login.php");}
     <td>01523333383</td>
     <td>Female</td>
     <td>2000-04-03</td>
-    <td>Bashundhara,Dhaka.</td>
+    <td>Badda,Dhaka.</td>
     <td>
         <select name="doctorName" id="doctorName">
         <option value="Mr.Rahim">Mr. Rahim</option>
@@ -310,7 +312,7 @@ else{header("location:login.php");}
 </form>
 </div>
 </div>
-</div>
 <?php require 'Bar/footer.php';?>
+</div>
 </body>
 </html>
