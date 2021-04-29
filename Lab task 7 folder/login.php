@@ -17,10 +17,10 @@ require 'controller/loginCheck.php';
   <div class="container">
 <div class="div">
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" >
- <div class="b" style="border: 2px solid black; padding: 10px 10px;">
+ <div class="b">
   <legend>LOGIN</legend>
 
-  <div class="b" style="border: 2px solid black; padding: 10px 10px;">
+  <div class="b">
   <legend> Category</legend> 
   <input type="radio" id="doctor" name="category" value="Doctor"<?php if(isset($_COOKIE['category']) && $_COOKIE['category']=="Doctor"){echo "checked";} ?>>
   <label for="doctor">Doctor</label>

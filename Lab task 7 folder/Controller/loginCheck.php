@@ -21,6 +21,12 @@ if (isset($_POST['name']) && isset($_POST['category']))
     }
     header("location:welcome.php");
 	}
+  else
+  {
+    $nameErr = "Name Invalid ";
+    $passwordErr = "Password Invalid ";
+    $categoryErr = "Category Invalid ";
+  }
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
@@ -65,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   else 
   {
     $password = test_input($_POST["password"]);
-    if (strlen($password) <= 8)
+    if (strlen($password) < 8)
     {
       $passwordErr = "Must be atleast 8 characters";
       $password="";

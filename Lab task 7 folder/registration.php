@@ -19,7 +19,7 @@ require 'Controller/storeData.php';
 ?>
   <div class="container">
 <div class="div">
-<div class="b" style="border: 2px solid black; padding: 10px 10px;">
+<div class="b">
 <legend>REGISTRATION</legend>                 
   <form method="post"> 
   <label for=name">Name :</label>
@@ -46,7 +46,7 @@ require 'Controller/storeData.php';
   <input type="password" id="confirm_password" name="confirm_password">
   <span class="error"> <?php echo $confirm_passwordErr;?></span><hr>
 
-<div class="b" style="border: 2px solid black; padding: 10px 10px;">
+<div class="b">
   <legend>Shift</legend>
   <input type="radio" id="day" name="shift" value="Day (8AM - 4PM)">
   <label for="day">Day</label>
@@ -55,7 +55,7 @@ require 'Controller/storeData.php';
   <span class="error"> <?php echo $shiftErr;?></span>
   </div><br>
 
-<div class="b" style="border: 2px solid black; padding: 10px 10px;">
+<div class="b">
 <legend> Category</legend> 
   <input type="radio" id="doctor" name="category" value="Doctor">
   <label for="doctor">Doctor</label>
@@ -66,7 +66,7 @@ require 'Controller/storeData.php';
   <span class="error"> <?php echo $categoryErr;?></span>
  </div><br>
 
-<div class="b" style="border: 2px solid black; padding: 10px 10px;">
+<div class="b">
 <legend> Gender</legend> 
   <input type="radio" id="male" name="gender" value="Male">
   <label for="male">Male</label>
@@ -77,7 +77,7 @@ require 'Controller/storeData.php';
   <span class="error"> <?php echo $genderErr;?></span>
  </div><br>
 
-<div class="b" style="border: 2px solid black; padding: 10px 10px;">
+<div class="b">
   <legend>Date of Birthday</legend>
   <input type="date" name="dob"> 
   <span class="error"> <?php echo $dobErr;?></span>

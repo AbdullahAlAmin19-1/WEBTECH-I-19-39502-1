@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   else 
   {
     $password = test_input($_POST["password"]);
-    if (strlen($password) <= 8)
+    if (strlen($password) < 8)
     {
       $passwordErr = "Must be atleast 8 characters";
       $password="";
